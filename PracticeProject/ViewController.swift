@@ -9,16 +9,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var customBtn: UIButton!
+    
+    @IBOutlet var detailBtn: UIButton!
+    
+    @IBOutlet var InfoBtn: UIButton!
+    
+    @IBOutlet var nextBtn: UIButton!
+
+    @IBOutlet var closeBtn: UIButton!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-//abc
-    
-    
-// XYZ
-    
-    // PQR
 
+    }
+
+    @IBAction func customBtnAction(){
+        let SVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        self.navigationController?.pushViewController(SVC, animated: true)
+    }
+    
 }
 
